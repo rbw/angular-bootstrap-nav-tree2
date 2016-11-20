@@ -307,9 +307,9 @@
               tree.remove_branch = function(child) {
                 if (child != null) {
                   var parent = get_parent(child);
-                  parent.children.splice(parent.children.indexOf(child));
+                  parent.children.splice(parent.children.indexOf(child), 1);
                 }
-              };              
+              };
               tree.add_root_branch = function(new_branch) {
                 tree.add_branch(null, new_branch);
                 return new_branch;
