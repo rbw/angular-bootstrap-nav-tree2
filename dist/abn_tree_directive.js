@@ -13,6 +13,7 @@
         scope: {
           treeData: '=',
           onSelect: '&',
+          contextMenu: '=',
           initialSelection: '@',
           treeControl: '='
         },
