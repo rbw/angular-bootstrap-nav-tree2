@@ -304,10 +304,13 @@
                 }
                 return new_branch;
               };
-              tree.remove_branch = function(child) {
-                if (child != null) {
-                  var parent = get_parent(child);
-                  parent.children.splice(parent.children.indexOf(child), 1);
+              tree.remove_branch = function(branch) {
+                if (branch != null) {
+                  var parent = get_parent(branch);
+                  // Make sure we have a parent
+                  if(parent != null) {
+                    parent.children.splice(parent.children.indexOf(branch), 1);
+                  }
                 }
               };
               tree.add_root_branch = function(new_branch) {
